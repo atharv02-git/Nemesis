@@ -1,0 +1,1201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Navbar */
+
+.container {
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    position: fixed;
+    background-color: whitesmoke;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.navbar img {
+    display: block;
+    position: relative;
+    top: 1px;
+}
+
+header .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    padding-left: 50px;
+    margin-left: 90px;
+    color: black;
+}
+
+.nav-menu li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu>li>a:hover {
+    background-color: rgb(204, 201, 201);
+    border-radius: 6px;
+    text-decoration: underline;
+}
+
+.navbar ul li span {
+    margin-left: 5px;
+    display: inline;
+}
+
+.nav-menus-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-left: 115px;
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+    cursor: pointer;
+}
+
+.openMenu {
+    font-size: 1.5rem;
+    padding: 0px 9px;
+}
+
+.SearchMenu {
+    font-size: 1.5rem;
+}
+
+.closeMenu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-search:before {
+    content: "\f002";
+    cursor: pointer;
+}
+
+
+/*Top image CSS  */
+
+section .container {
+    position: relative;
+}
+
+section .top-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+section .top-img::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 350px;
+    height: 350px;
+    border-radius: 2000px;
+    background: #ffad00;
+    left: 20px;
+    top: 60px;
+}
+
+section .top-img img {
+    position: relative;
+    height: 450px;
+    width: 834px;
+    /* overflow: hidden; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+    margin-left: 100px;
+    box-shadow: 3px -3px 12px;
+    border-radius: 10px;
+}
+
+section .top-img p {
+    font-weight: bold;
+    font-size: 3rem;
+    position: relative;
+    width: 24rem;
+    z-index: -1;
+    right: 0;
+    left: 50px;
+    top: 150px;
+}
+
+section .top-img p::after {
+    content: "";
+    position: absolute;
+    margin-top: -3px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: rgb(255 0 142 / 83%);
+    margin-left: -74px;
+    z-index: -2;
+}
+
+
+/* Row 1 CSS */
+
+.section {
+    margin-bottom: auto;
+}
+
+.section .row-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 60px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* Hiking img CSS*/
+
+.hiking-img img {
+    border-radius: 16px;
+}
+
+.hiking-img {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    margin-top: 43px;
+}
+
+
+/* This container is needed to position front and back side */
+
+.hiking-img-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.hiking-img:hover .hiking-img-inner {
+    transform: rotateX(180deg);
+}
+
+.hiking-note {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.5;
+    color: white;
+}
+
+
+/* Positioning front and back side */
+
+.hiking-img-front,
+.hiking-img-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+
+/* Style the front side (fallback if image is missing) */
+
+.hiking-img-front {
+    background-color: #bbb;
+    color: black;
+}
+
+
+/* Style the back side */
+
+.hiking-img-back {
+    background-color: #3856ee;
+    color: white;
+    transform: rotateX(180deg);
+}
+
+.hiking-img-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.hiking-img-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.hiking-img-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Friends Trek */
+
+.group-trek img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.group-trek {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    /* margin-left: 161px; */
+    margin-top: 43px;
+}
+
+.group-trek-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.group-trek:hover .group-trek-inner {
+    transform: rotateY(180deg);
+}
+
+.group-trek-front,
+.group-trek-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.group-trek-front p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.5;
+    color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.group-trek-back {
+    /* background-color: #3856ee; */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.group-trek-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.group-trek-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.group-trek-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Work img CSS*/
+
+.work-img img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.work-img {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    margin-top: 43px;
+}
+
+.work-img-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.work-img:hover .work-img-inner {
+    transform: rotateX(-270deg);
+}
+
+.work-note {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.8;
+    color: white;
+}
+
+.work-img-front,
+.work-img-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.work-img-back {
+    background-color: orange;
+    color: white;
+    transform: rotateX(270deg);
+}
+
+.work-img-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.work-img-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.work-img-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Row 2 CSS Start */
+
+.section .row-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 60px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* Friends Sitting CSS */
+
+.sitting img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sitting {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    margin-top: 43px;
+}
+
+.sitting-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.sitting:hover .sitting-inner {
+    transform: rotateY(-180deg);
+}
+
+.sitting-front,
+.sitting-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.sitting-front p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.5;
+    color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.sitting-back {
+    /* background-color: #3856ee; */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.sitting-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.sitting-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.sitting-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Beach image CSS*/
+
+.beach img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.beach {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    margin-top: 43px;
+}
+
+.beach-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.beach:hover .beach-inner {
+    transform: rotateX(-180deg);
+}
+
+.beach-note {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.5;
+    color: white;
+}
+
+.beach-front,
+.beach-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.beach-back {
+    background-color: #bbbbf8;
+    color: white;
+    transform: rotateX(180deg);
+}
+
+.beach-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.beach-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.beach-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Cycle CSS */
+
+.cycle img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cycle {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    margin-top: 43px;
+}
+
+.cycle-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.cycle:hover .cycle-inner {
+    transform: rotateY(180deg);
+}
+
+.cycle-front,
+.cycle-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cycle-front p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.5;
+    color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cycle-back {
+    /* background-color: #3856ee; */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.cycle-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.cycle-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.cycle-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Row 3 CSS Start */
+
+.section .row-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 60px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* Wheat image CSS */
+
+.wheat img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wheat {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin-top: 43px;
+}
+
+.wheat-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.wheat:hover .wheat-inner {
+    transform: rotateX(-270deg);
+}
+
+.wheat-note {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.5;
+    color: white;
+}
+
+.wheat-front,
+.wheat-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.wheat-back {
+    background-color: #3AB3DF;
+    color: white;
+    transform: rotateX(270deg);
+}
+
+.wheat-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.wheat-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.wheat-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* Field walk */
+
+.field img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.field {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    /*for 3d effect */
+    /* margin-left: 161px; */
+    margin-top: 43px;
+}
+
+.field-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.field:hover .field-inner {
+    transform: rotateY(180deg);
+}
+
+.field-front,
+.field-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.field-front p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.8;
+    color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.field-back {
+    /* background-color: #3856ee; */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.field-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.field-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.field-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* bay image CSS */
+
+.bay img {
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bay {
+    height: 400px;
+    width: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin-top: 43px;
+}
+
+.bay-inner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.bay:hover .bay-inner {
+    transform: rotateX(-180deg);
+}
+
+.bay-note {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.3rem;
+    top: 10px;
+    opacity: 0.8;
+    color: white;
+}
+
+.bay-front,
+.bay-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.bay-back {
+    background-color: #8f8e8e;
+    color: white;
+    transform: rotateX(180deg);
+}
+
+.bay-back h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.bay-back p {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.bay-back span {
+    margin-top: 90px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+
+/* More Posts CSS */
+
+.more-posts {
+    text-align: center;
+    margin: 30px 0 30px !important;
+    padding-bottom: 60px;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.more-posts-older-link {
+    position: relative;
+    color: black;
+}
+
+.more-posts-older-link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffad00;
+    left: -40px;
+    top: -23px;
+}
+
+.more-posts-older-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, rgba(0, 201, 255, 0)), to(rgba(0, 201, 255, 0.25)));
+    background: linear-gradient( 180deg, rgba(0, 201, 255, 0) 45%, rgba(0, 201, 255, 0.25) 100%);
+    left: 50%;
+    top: -80px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.list-inline-item {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+/* Form CSS */
+
+.form h3 {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    padding-top: 19px;
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.form {
+    background-color: #faf7f7;
+    border: 2px solid #faf7f7;
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 30px;
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.form h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #97CE4E;
+    z-index: -1;
+    margin-top: -77px;
+    margin-left: -55px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+form #form-email {
+    width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Baloo Bhai 2';
+    font-size: 1.1rem;
+    position: relative;
+}
+
+form .btn-submit {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-family: 'Baloo Bhai 2';
+    background-color: #4a42ec;
+    border: 2px solid white;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+
+/* footer */
+
+.footer {
+    position: relative;
+    bottom: 200px;
+    z-index: -1;
+    margin-bottom: -200px;
+}
+
+
+/* Bottom Shape */
+
+.fbt-bottom-shape {
+    margin-top: 0;
+    background: #fff;
+    height: 300px;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.fbt-bottom-shape svg {
+    fill: #4a41e7;
+}
+
+.fbt-bottom-shape .fbt-footer-wave {
+    height: 302px;
+}
+
+
+/* Bottom Rectangle */
+
+.footer-bottom-rectangle {
+    position: relative;
+    background-color: #4a42ec;
+    padding-top: 25px;
+}
+
+.footer-bottom-rectangle .container {
+    background-color: #4a42ec;
+    color: white;
+}
+
+
+/* Footer logo and P */
+
+.footer-bottom-rectangle .footer-logo p {
+    width: 41%;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-bottom-rectangle .footer-logo {
+    position: relative;
+    left: 77px;
+}
+
+
+/* Table Content */
+
+.footer-bottom-rectangle .bottom-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 114px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 355px;
+    bottom: 185px;
+}
+
+.footer-bottom-rectangle .bottom-nav .group {
+    display: contents;
+}
+
+.footer-bottom-rectangle .bottom-nav ul {
+    list-style: none;
+}
+
+
+/* Socials */
+
+.footer-bottom-rectangle .divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom-rectangle .divider::before {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    display: block;
+    width: 80%;
+    height: 2px;
+    margin-left: -40%;
+    content: '';
+    background: radial-gradient(ellipse at center, #fff 0, rgba(255, 255, 255, 0) 75%);
+    opacity: .6;
+}
+
+.copyright p {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.copyright span {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 300px;
+    column-gap: 25px;
+    bottom: -8px;
+}
+
+.fa-angle-up {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fa-angle-up:before {
+    content: "\f106";
+    position: fixed;
+    bottom: 20px;
+    right: 8px;
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
